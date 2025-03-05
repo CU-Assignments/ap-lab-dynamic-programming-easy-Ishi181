@@ -72,3 +72,24 @@ public:
 # Output
 ![image](https://github.com/user-attachments/assets/5a0323a5-e530-4ad4-9064-aa1035cbe3e8)
 
+# Best time to buy and sell stock
+```
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int minPrice = INT_MAX, maxProfit = 0;
+        
+        for (int price : prices) {
+            if (price < minPrice) 
+                minPrice = price; // Update the minimum price
+            else
+                maxProfit = max(maxProfit, price - minPrice); // Update max profit
+        }
+        
+        return maxProfit;
+    }
+};
+
+```
+# Output
+![image](https://github.com/user-attachments/assets/00e7146e-024e-434e-ae06-7228b121ef2a)
